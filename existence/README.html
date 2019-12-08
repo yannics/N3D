@@ -1,0 +1,853 @@
+<html>
+<body> 
+
+<!-- HTML generated using hilite.me        -->
+<!-- Langage: Common Lisp; Style: colorful -->
+
+<pre style="white-space: pre-wrap; margin: 0; line-height: 125%"><span style="color: #888888">; SLIME 2014-06-17</span>
+<span style="color: #996633">CL-USER&gt;</span> (<span style="color: #007020">require</span> <span style="color: #AA6600">&#39;N3D</span>)
+<span style="color: #996633">N3D</span>
+<span style="color: #996633">CL-USER&gt;</span> (<span style="color: #007020">in-package</span> <span style="color: #AA6600">:N3D</span>)
+<span style="color: #FF0000; background-color: #FFAAAA">#</span><span style="color: #996633">&lt;Package</span> <span style="background-color: #fff0f0">&quot;N3D&quot;</span><span style="color: #007020">&gt;</span>
+
+
+<span style="color: #888888">;;; TEST EXISTENCE010</span>
+<span style="color: #996633">N3D&gt;</span> (<span style="color: #996633">create-agent</span> <span style="color: #996633">E010</span>)
+<a id="displayAg1" href="javascript:ag1();">show agent</a>
+<div id="toggleAg1" style="display: none">#S(<span style="color: #996633">AGENT</span>
+   <span style="color: #AA6600">:EXISTENCE</span> #S(<span style="color: #996633">EXISTENCE</span>
+                 <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E010</span>
+                 <span style="color: #AA6600">:MOOD</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                 <span style="color: #AA6600">:EXPERIMENTS</span> (#S(<span style="color: #996633">EXPERIMENT</span>
+                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                               #S(<span style="color: #996633">EXPERIMENT</span>
+                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>))
+                 <span style="color: #AA6600">:RESULTS</span> (#S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                           #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>))
+                 <span style="color: #AA6600">:INTERACTIONS</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                 <span style="color: #AA6600">:PREVIOUS</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                              <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                              <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                              <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                              <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                 <span style="color: #AA6600">:BOREDOME-LEVEL</span> <span style="color: #0000DD; font-weight: bold">3</span>
+                 <span style="color: #AA6600">:SELF-SATISFACTION-COUNTER</span> <span style="color: #0000DD; font-weight: bold">0</span>
+                 <span style="color: #AA6600">:EPOCH</span> <span style="color: #0000DD; font-weight: bold">0</span>)
+   <span style="color: #AA6600">:STEP</span> <span style="color: #FF0000; background-color: #FFAAAA">#</span><span style="color: #996633">&lt;STANDARD-GENERIC-FUNCTION</span> <span style="color: #996633">STEP010</span> (<span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #007020">&gt;</span>
+   <span style="color: #AA6600">:RESULT</span> <span style="color: #FF0000; background-color: #FFAAAA">#</span><span style="color: #996633">&lt;STANDARD-GENERIC-FUNCTION</span> <span style="color: #996633">RESULT010</span> (<span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #007020">&gt;</span>)
+</div><span style="color: #996633">N3D&gt;</span> (<span style="color: #996633">run-agent</span> <span style="color: #996633">E010</span>)
+<a id="displayRes1" href="javascript:res1();">show result</a>
+<div id="toggleRes1" style="display: none"><span style="color: #996633">0:</span> <span style="color: #996633">E1R1</span> <span style="color: #996633">frustrated</span>
+<span style="color: #996633">1:</span> <span style="color: #996633">E1R1</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #996633">2:</span> <span style="color: #996633">E1R1</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #996633">3:</span> <span style="color: #996633">E1R1</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #996633">4:</span> <span style="color: #996633">E1R1</span> <span style="color: #996633">bored</span>
+<span style="color: #996633">5:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">frustrated</span>
+<span style="color: #996633">6:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #996633">7:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #996633">8:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #996633">9:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">bored</span>
+<span style="color: #996633">10:</span> <span style="color: #996633">E1R1</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #996633">11:</span> <span style="color: #996633">E1R1</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #996633">12:</span> <span style="color: #996633">E1R1</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #996633">13:</span> <span style="color: #996633">E1R1</span> <span style="color: #996633">bored</span>
+<span style="color: #996633">14:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #996633">15:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #996633">16:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #996633">17:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">bored</span>
+<span style="color: #996633">18:</span> <span style="color: #996633">E1R1</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #996633">19:</span> <span style="color: #996633">E1R1</span> <span style="color: #996633">self-satisfied</span>
+<span style="color: #003366; font-weight: bold">NIL</span>
+</div><span style="color: #996633">N3D&gt;</span> (<span style="color: #996633">agent-existence</span> <span style="color: #996633">E010</span>)
+<a id="displayText1" href="javascript:ex1();">show existence</a>
+<div id="toggleText1" style="display: none">#S(<span style="color: #996633">EXISTENCE</span>
+   <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E010</span>
+   <span style="color: #AA6600">:MOOD</span> <span style="background-color: #fff0f0">&quot;self-satisfied&quot;</span>
+   <span style="color: #AA6600">:EXPERIMENTS</span> (#S(<span style="color: #996633">EXPERIMENT</span>
+                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                 #S(<span style="color: #996633">EXPERIMENT</span>
+                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>))
+   <span style="color: #AA6600">:RESULTS</span> (#S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+             #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>))
+   <span style="color: #AA6600">:INTERACTIONS</span> (#S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I2</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                     <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">0</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                  #S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I1</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                     <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>)
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">0</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>))
+   <span style="color: #AA6600">:PREVIOUS</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+   <span style="color: #AA6600">:BOREDOME-LEVEL</span> <span style="color: #0000DD; font-weight: bold">3</span>
+   <span style="color: #AA6600">:SELF-SATISFACTION-COUNTER</span> <span style="color: #0000DD; font-weight: bold">3</span>
+   <span style="color: #AA6600">:EPOCH</span> <span style="color: #0000DD; font-weight: bold">20</span>)
+   </div>
+
+<span style="color: #888888">;;; TEST EXISTENCE020</span>
+<span style="color: #996633">N3D&gt;</span> (<span style="color: #996633">create-agent</span> <span style="color: #996633">E020</span>)
+<a id="displayAg2" href="javascript:ag2();">show agent</a>
+<div id="toggleAg2" style="display: none">#S(<span style="color: #996633">AGENT</span>
+   <span style="color: #AA6600">:EXISTENCE</span> #S(<span style="color: #996633">EXISTENCE</span>
+                 <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E020</span>
+                 <span style="color: #AA6600">:MOOD</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                 <span style="color: #AA6600">:EXPERIMENTS</span> (#S(<span style="color: #996633">EXPERIMENT</span>
+                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                               #S(<span style="color: #996633">EXPERIMENT</span>
+                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>))
+                 <span style="color: #AA6600">:RESULTS</span> (#S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                           #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>))
+                 <span style="color: #AA6600">:INTERACTIONS</span> (#S(<span style="color: #996633">INTERACTION</span>
+                                   <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I4</span>
+                                   <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                   <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                              <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span>
+                                              <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                                   <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                                   <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                   <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                                #S(<span style="color: #996633">INTERACTION</span>
+                                   <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I3</span>
+                                   <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                   <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                              <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span>
+                                              <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>)
+                                   <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+                                   <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                   <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                                #S(<span style="color: #996633">INTERACTION</span>
+                                   <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I2</span>
+                                   <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                   <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                              <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span>
+                                              <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                                   <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                                   <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                   <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                                #S(<span style="color: #996633">INTERACTION</span>
+                                   <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I1</span>
+                                   <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                   <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                              <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span>
+                                              <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>)
+                                   <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+                                   <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                   <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>))
+                 <span style="color: #AA6600">:PREVIOUS</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                              <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                              <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                              <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                              <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                 <span style="color: #AA6600">:BOREDOME-LEVEL</span> <span style="color: #0000DD; font-weight: bold">3</span>
+                 <span style="color: #AA6600">:SELF-SATISFACTION-COUNTER</span> <span style="color: #0000DD; font-weight: bold">0</span>
+                 <span style="color: #AA6600">:EPOCH</span> <span style="color: #0000DD; font-weight: bold">0</span>)
+   <span style="color: #AA6600">:STEP</span> <span style="color: #FF0000; background-color: #FFAAAA">#</span><span style="color: #996633">&lt;STANDARD-GENERIC-FUNCTION</span> <span style="color: #996633">STEP020</span> (<span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #007020">&gt;</span>
+   <span style="color: #AA6600">:RESULT</span> <span style="color: #FF0000; background-color: #FFAAAA">#</span><span style="color: #996633">&lt;STANDARD-GENERIC-FUNCTION</span> <span style="color: #996633">RESULT020</span> (<span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #007020">&gt;</span>)
+</div><span style="color: #996633">N3D&gt;</span> (<span style="color: #996633">run-agent</span> <span style="color: #996633">E020</span>)
+<a id="displayRes2" href="javascript:res2();">show result</a>
+<div id="toggleRes2" style="display: none"><span style="color: #996633">0:</span> <span style="color: #996633">E1R1</span> <span style="color: #996633">pained</span>
+<span style="color: #996633">1:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">2:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">3:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">4:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">5:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">6:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">7:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">8:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">9:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">10:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">11:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">12:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">13:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">14:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">15:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">16:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">17:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">18:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">19:</span> <span style="color: #996633">E2R2</span> <span style="color: #996633">pleased</span>
+<span style="color: #003366; font-weight: bold">NIL</span>
+</div><span style="color: #996633">N3D&gt;</span> (<span style="color: #996633">agent-existence</span> <span style="color: #996633">E020</span>)
+<a id="displayText2" href="javascript:ex2();">show existence</a>
+<div id="toggleText2" style="display: none">#S(<span style="color: #996633">EXISTENCE</span>
+   <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E020</span>
+   <span style="color: #AA6600">:MOOD</span> <span style="background-color: #fff0f0">&quot;pleased&quot;</span>
+   <span style="color: #AA6600">:EXPERIMENTS</span> (#S(<span style="color: #996633">EXPERIMENT</span>
+                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                 #S(<span style="color: #996633">EXPERIMENT</span>
+                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>))
+   <span style="color: #AA6600">:RESULTS</span> (#S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+             #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>))
+   <span style="color: #AA6600">:INTERACTIONS</span> (#S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I4</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                     <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                  #S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I3</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                     <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>)
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                  #S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I2</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                     <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                  #S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I1</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                     <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>)
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>))
+   <span style="color: #AA6600">:PREVIOUS</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+   <span style="color: #AA6600">:BOREDOME-LEVEL</span> <span style="color: #0000DD; font-weight: bold">3</span>
+   <span style="color: #AA6600">:SELF-SATISFACTION-COUNTER</span> <span style="color: #0000DD; font-weight: bold">0</span>
+   <span style="color: #AA6600">:EPOCH</span> <span style="color: #0000DD; font-weight: bold">20</span>)
+</div>
+
+<span style="color: #888888">;;; TEST EXISTENCE030</span>
+<span style="color: #996633">N3D&gt;</span> (<span style="color: #996633">create-agent</span> <span style="color: #996633">E030</span>)
+<a id="displayAg3" href="javascript:ag3();">show agent</a>
+<div id="toggleAg3" style="display: none">#S(<span style="color: #996633">AGENT</span>
+   <span style="color: #AA6600">:EXISTENCE</span> #S(<span style="color: #996633">EXISTENCE</span>
+                 <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E030</span>
+                 <span style="color: #AA6600">:MOOD</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                 <span style="color: #AA6600">:EXPERIMENTS</span> (#S(<span style="color: #996633">EXPERIMENT</span>
+                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                               #S(<span style="color: #996633">EXPERIMENT</span>
+                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>))
+                 <span style="color: #AA6600">:RESULTS</span> (#S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                           #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>))
+                 <span style="color: #AA6600">:INTERACTIONS</span> (#S(<span style="color: #996633">INTERACTION</span>
+                                   <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I4</span>
+                                   <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                   <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                              <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span>
+                                              <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                                   <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                                   <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                   <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                                #S(<span style="color: #996633">INTERACTION</span>
+                                   <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I3</span>
+                                   <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                   <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                              <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span>
+                                              <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>)
+                                   <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+                                   <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                   <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                                #S(<span style="color: #996633">INTERACTION</span>
+                                   <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I2</span>
+                                   <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                   <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                              <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span>
+                                              <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                                   <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                                   <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                   <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                                #S(<span style="color: #996633">INTERACTION</span>
+                                   <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I1</span>
+                                   <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                  <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                                  <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                                  <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                  <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                   <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                              <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span>
+                                              <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>)
+                                   <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+                                   <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                   <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                   <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>))
+                 <span style="color: #AA6600">:PREVIOUS</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                              <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                              <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                              <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                              <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                 <span style="color: #AA6600">:BOREDOME-LEVEL</span> <span style="color: #0000DD; font-weight: bold">3</span>
+                 <span style="color: #AA6600">:SELF-SATISFACTION-COUNTER</span> <span style="color: #0000DD; font-weight: bold">0</span>
+                 <span style="color: #AA6600">:EPOCH</span> <span style="color: #0000DD; font-weight: bold">0</span>)
+   <span style="color: #AA6600">:STEP</span> <span style="color: #FF0000; background-color: #FFAAAA">#</span><span style="color: #996633">&lt;STANDARD-GENERIC-FUNCTION</span> <span style="color: #996633">STEP030</span> (<span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #007020">&gt;</span>
+   <span style="color: #AA6600">:RESULT</span> <span style="color: #FF0000; background-color: #FFAAAA">#</span><span style="color: #996633">&lt;STANDARD-GENERIC-FUNCTION</span> <span style="color: #996633">RESULT030</span> (<span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #007020">&gt;</span>)
+</div><span style="color: #996633">N3D&gt;</span> (<span style="color: #996633">run-agent</span> <span style="color: #996633">E030</span>)
+<a id="displayRes3" href="javascript:res3();">show result</a>
+<div id="toggleRes3" style="display: none"><span style="color: #996633">Enacted</span> <span style="color: #996633">E1R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">0:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E1R1</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+<span style="color: #996633">Learned</span> <span style="color: #996633">E1R2E1R1</span>
+<span style="color: #996633">1:</span> <span style="color: #996633">pained</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E1R1</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+<span style="color: #996633">Learned</span> <span style="color: #996633">E1R1E1R1</span>
+<span style="color: #996633">2:</span> <span style="color: #996633">pained</span>
+<span style="color: #996633">afforded</span> <span style="color: #996633">E1R1</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E2R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">Learned</span> <span style="color: #996633">E1R1E2R2</span>
+<span style="color: #996633">3:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E1R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">Learned</span> <span style="color: #996633">E2R2E1R2</span>
+<span style="color: #996633">4:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">afforded</span> <span style="color: #996633">E1R1</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E2R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">Learned</span> <span style="color: #996633">E1R2E2R2</span>
+<span style="color: #996633">5:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E1R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">6:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E2R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">7:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E1R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">8:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E2R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">9:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E1R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">10:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E2R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">11:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E1R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">12:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E2R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">13:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E1R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">14:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E2R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">15:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E1R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">16:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E2R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">17:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E1R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">18:</span> <span style="color: #996633">pleased</span>
+<span style="color: #996633">Enacted</span> <span style="color: #996633">E2R2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #996633">19:</span> <span style="color: #996633">pleased</span>
+<span style="color: #003366; font-weight: bold">NIL</span>
+</div><span style="color: #996633">N3D&gt;</span> (<span style="color: #996633">agent-existence</span> <span style="color: #996633">E030</span>)
+<a id="displayText3" href="javascript:ex3();">show existence</a>
+<div id="toggleText3" style="display: none">#S(<span style="color: #996633">EXISTENCE</span>
+   <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E030</span>
+   <span style="color: #AA6600">:MOOD</span> <span style="background-color: #fff0f0">&quot;pleased&quot;</span>
+   <span style="color: #AA6600">:EXPERIMENTS</span> (#S(<span style="color: #996633">EXPERIMENT</span>
+                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                 #S(<span style="color: #996633">EXPERIMENT</span>
+                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>))
+   <span style="color: #AA6600">:RESULTS</span> (#S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+             #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>))
+   <span style="color: #AA6600">:INTERACTIONS</span> (#S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I9</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:RESULT</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">2</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> #S(<span style="color: #996633">INTERACTION</span>
+                                         <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I2</span>
+                                         <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                        <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                                        <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                                        <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                        <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                         <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span>
+                                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                                         <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                                         <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                         <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                         <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                         <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                     <span style="color: #AA6600">:POST-INTERACTION</span> #S(<span style="color: #996633">INTERACTION</span>
+                                          <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I4</span>
+                                          <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                         <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                                         <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                                         <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                         <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                          <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span>
+                                                     <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                                          <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                                          <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                          <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                          <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                          <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #0000DD; font-weight: bold">8</span>)
+                  #S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I8</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:RESULT</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">2</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> #S(<span style="color: #996633">INTERACTION</span>
+                                         <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I4</span>
+                                         <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                        <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                                        <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                                        <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                        <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                         <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span>
+                                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                                         <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                                         <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                         <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                         <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                         <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                     <span style="color: #AA6600">:POST-INTERACTION</span> #S(<span style="color: #996633">INTERACTION</span>
+                                          <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I2</span>
+                                          <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                         <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                                         <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                                         <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                         <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                          <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span>
+                                                     <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                                          <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                                          <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                          <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                          <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                          <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #0000DD; font-weight: bold">8</span>)
+                  #S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I7</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:RESULT</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">0</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> #S(<span style="color: #996633">INTERACTION</span>
+                                         <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I1</span>
+                                         <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                        <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                                        <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                                        <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                        <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                         <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span>
+                                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>)
+                                         <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+                                         <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                         <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                         <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                         <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                     <span style="color: #AA6600">:POST-INTERACTION</span> #S(<span style="color: #996633">INTERACTION</span>
+                                          <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I4</span>
+                                          <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                         <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                                         <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                                         <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                         <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                          <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span>
+                                                     <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                                          <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                                          <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                          <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                          <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                          <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #0000DD; font-weight: bold">1</span>)
+                  #S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I6</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:RESULT</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">-2</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> #S(<span style="color: #996633">INTERACTION</span>
+                                         <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I1</span>
+                                         <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                        <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                                        <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                                        <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                        <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                         <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span>
+                                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>)
+                                         <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+                                         <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                         <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                         <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                         <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                     <span style="color: #AA6600">:POST-INTERACTION</span> #S(<span style="color: #996633">INTERACTION</span>
+                                          <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I1</span>
+                                          <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                         <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                                         <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                                         <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                         <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                          <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span>
+                                                     <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>)
+                                          <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+                                          <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                          <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                          <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                          <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #0000DD; font-weight: bold">1</span>)
+                  #S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I5</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:RESULT</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">0</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> #S(<span style="color: #996633">INTERACTION</span>
+                                         <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I2</span>
+                                         <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                        <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                                        <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                                        <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                        <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                         <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span>
+                                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                                         <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                                         <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                         <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                         <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                         <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                     <span style="color: #AA6600">:POST-INTERACTION</span> #S(<span style="color: #996633">INTERACTION</span>
+                                          <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I1</span>
+                                          <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                                         <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                                         <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                                         <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                                         <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                                          <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span>
+                                                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span>
+                                                     <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>)
+                                          <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+                                          <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                                          <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                          <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                          <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #0000DD; font-weight: bold">1</span>)
+                  #S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I4</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                     <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                  #S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I3</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                     <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>)
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                  #S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I2</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                     <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+                  #S(<span style="color: #996633">INTERACTION</span>
+                     <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I1</span>
+                     <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                                    <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E1</span>
+                                    <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment one&quot;</span>
+                                    <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                                    <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                     <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R1</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result one&quot;</span>)
+                     <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">-1</span>
+                     <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                     <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                     <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>))
+   <span style="color: #AA6600">:PREVIOUS</span> #S(<span style="color: #996633">INTERACTION</span>
+                <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">I4</span>
+                <span style="color: #AA6600">:EXPERIMENT</span> #S(<span style="color: #996633">EXPERIMENT</span>
+                               <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">E2</span>
+                               <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;experiment two&quot;</span>
+                               <span style="color: #AA6600">:ABSTRACT-P</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                               <span style="color: #AA6600">:INTENDED-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>)
+                <span style="color: #AA6600">:RESULT</span> #S(<span style="color: #996633">RESULT</span> <span style="color: #AA6600">:LABEL</span> <span style="color: #996633">R2</span> <span style="color: #AA6600">:STR</span> <span style="background-color: #fff0f0">&quot;result two&quot;</span>)
+                <span style="color: #AA6600">:VALENCE</span> <span style="color: #0000DD; font-weight: bold">1</span>
+                <span style="color: #AA6600">:PRIMITIVE-P</span> <span style="color: #003366; font-weight: bold">T</span>
+                <span style="color: #AA6600">:PRE-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                <span style="color: #AA6600">:POST-INTERACTION</span> <span style="color: #003366; font-weight: bold">NIL</span>
+                <span style="color: #AA6600">:WEIGHT</span> <span style="color: #003366; font-weight: bold">0</span>)
+   <span style="color: #AA6600">:BOREDOME-LEVEL</span> <span style="color: #0000DD; font-weight: bold">3</span>
+   <span style="color: #AA6600">:SELF-SATISFACTION-COUNTER</span> <span style="color: #0000DD; font-weight: bold">0</span>
+   <span style="color: #AA6600">:EPOCH</span> <span style="color: #0000DD; font-weight: bold">20</span>)
+</div>
+
+
+</pre>
+<!-- ################################## 010 ################################## -->
+<script language="javascript"> 
+function ex1() {
+	var ele = document.getElementById("toggleText1");
+	var text = document.getElementById("displayText1");
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "show existence";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "hide existence";
+	}
+} 
+</script>
+<script language="javascript"> 
+function ag1() {
+	var ele = document.getElementById("toggleAg1");
+	var text = document.getElementById("displayAg1");
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "show agent";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "hide agent";
+	}
+} 
+</script>
+<script language="javascript"> 
+function res1() {
+	var ele = document.getElementById("toggleRes1");
+	var text = document.getElementById("displayRes1");
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "show result";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "hide result";
+	}
+} 
+</script>
+<!-- ################################## 020 ################################## -->
+<script language="javascript"> 
+function ex2() {
+	var ele = document.getElementById("toggleText2");
+	var text = document.getElementById("displayText2");
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "show existence";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "hide existence";
+	}
+} 
+</script>
+<script language="javascript"> 
+function ag2() {
+	var ele = document.getElementById("toggleAg2");
+	var text = document.getElementById("displayAg2");
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "show agent";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "hide agent";
+	}
+} 
+</script>
+<script language="javascript"> 
+function res2() {
+	var ele = document.getElementById("toggleRes2");
+	var text = document.getElementById("displayRes2");
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "show result";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "hide result";
+	}
+} 
+</script>
+<!-- ################################## 030 ################################## -->
+<script language="javascript"> 
+function ex3() {
+	var ele = document.getElementById("toggleText3");
+	var text = document.getElementById("displayText3");
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "show existence";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "hide existence";
+	}
+} 
+</script>
+<script language="javascript"> 
+function ag3() {
+	var ele = document.getElementById("toggleAg3");
+	var text = document.getElementById("displayAg3");
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "show agent";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "hide agent";
+	}
+} 
+</script>
+<script language="javascript"> 
+function res3() {
+	var ele = document.getElementById("toggleRes3");
+	var text = document.getElementById("displayRes3");
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "show result";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "hide result";
+	}
+} 
+</script>
+</body>
